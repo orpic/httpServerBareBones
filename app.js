@@ -27,10 +27,10 @@ const server = createServer((req, res) => {
             // console.log(parsedbody)
             const message = parsedbody.split('=')[1];
             writeFileSync('message.txt', message);
+            res.statusCode = 302
+            res.setHeader("Location", "/")
+            return res.end()
         })
-        res.statusCode = 302
-        res.setHeader("Location", "/")
-        return res.end()
     }
     // console.log(req)
     // process.exit()
