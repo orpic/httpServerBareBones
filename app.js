@@ -11,7 +11,7 @@ const server = createServer((req, res) => {
     const method = req.method
     if (url === "/") {
         res.write('<html>')
-        res.write('<head><title>Send Message</title></head>')
+        res.write('<head><title>Send Message Changed</title></head>')
         res.write('<body><h1><form action="/message" method="POST"> <input type="text" name="message" /><button type="submit">Send to server</button></form></h1></body>')
         res.write('</html>')
         return res.end()
